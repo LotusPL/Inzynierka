@@ -18,6 +18,8 @@ public class BeaconActivity extends AppCompatActivity {
         setContentView(R.layout.activity_beacon);
         ArrayList<String> beacons = (ArrayList<String>)getIntent().getSerializableExtra("beaconList");
         ListView beaconList = (ListView)findViewById(R.id.beaconListView);
+        //TODO
+        // Zmienić tę pętlę for na wybieranie z bazy danych.
         for(int i=0;i<beacons.size();i++){
             if(beacons.get(i).equals("dWlT")){
                 beacons.set(i,"Miasteczko Studenckie AGH ("+beacons.get(i)+")");
@@ -29,6 +31,9 @@ public class BeaconActivity extends AppCompatActivity {
                 beacons.set(i,"Dom ("+beacons.get(i)+")");
             }
         }
+        /*
+
+         */
         ArrayAdapter<String> beaconAdapter = new ArrayAdapter<String>(this,R.layout.row,beacons);
         beaconList.setAdapter(beaconAdapter);
         beaconList.setOnItemClickListener(new AdapterView.OnItemClickListener() {

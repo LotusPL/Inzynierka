@@ -50,6 +50,13 @@ public class MainActivity extends AppCompatActivity implements OnConnectionFaile
 
     public ArrayList<String> beacons = new ArrayList<String>();
 
+    //##########################################################################################
+    //TODO
+    // - Przenieść wyszukiwanie beaconów do serwisu, żeby działało w tle
+    // - dodać funkcję updatującą ArrayAdapter przy zmianie na liście beaconów
+    // - Dodać stronę użytkownika
+    // - Podłączyć do bazy danych
+    //##########################################################################################
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
